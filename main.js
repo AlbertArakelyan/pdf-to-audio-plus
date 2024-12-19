@@ -17,6 +17,7 @@ app.on("ready", () => {
   });
 
   mainWindow.loadFile("index.html");
+  mainWindow.webContents.openDevTools();
 });
 
 // Handle PDF to Text conversion

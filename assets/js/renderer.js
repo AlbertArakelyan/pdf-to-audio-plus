@@ -28,11 +28,19 @@ async function convertPdfToAudioFromDialog() {
     console.log("audioPath", audioPath);
     if (audioPath) {
       pdfAudioPlayer.src = audioPath;
+      pdfAudioPlayer.onerror = () => {
+        alert(
+          "Seems you saved your audio out of the application's directory. Please find and play it manually."
+        );
+        // throw new Error(
+        //   "Seems you saved your audio out of the application's directory. Please find and play it manually."
+        // );
+      };
       alert(
         `Audio generated successfully at: ${audioPath}! You can also play it on the audio player.`
       );
     }
   } catch (error) {
-    console.error("Error converting PDF to audio:", error);
+    console.error(error.message);
   }
 }
