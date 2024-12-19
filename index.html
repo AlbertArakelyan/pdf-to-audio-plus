@@ -15,9 +15,14 @@
   <header class="bg-primary text-white p-2">
     <h1 class="text-center">PDF to Audio</h1>
   </header>
-  <main class="pt-2">
+  <main class="pt-3 pb-2">
     <div class="d-flex flex-column align-items-center mb-4">
-      <h2 class="text-primary mb-2">Convert PDF to Audio</h2>
+      <div class="d-flex align-items-start">
+        <h2 class="text-primary mb-2">
+          Convert PDF to Audio
+        </h2>
+        <span class="badge bg-primary">beta</span>
+      </div>
       <!-- <div>
         <input type="file" id="pdfInput" accept="application/pdf">
         <button class="btn btn-primary" id="convertPdf" onclick="convertPdf()">Convert</button>
@@ -42,14 +47,17 @@
         </select>
       </div>
       <div class="d-flex gap-2 mt-2 align-items-center">
-        <button class="btn btn-primary" onclick="convertText()" disabled>Generate Audio 1</button>
-        <button class="btn btn-primary" id="textToAudio">Generate Audio 2</button>
+        <button class="btn btn-primary" id="textToAudio">Generate Audio 1</button>
+        <button class="btn btn-primary" onclick="convertText()" disabled>Generate Audio 2</button>
       </div>
     </div>
 
     <!-- create obly button for "pdf-to-audio" handler, the rest will be handled by handler when button clicked -->
     <script src="./assets/js/renderer.js"></script>
   </main>
+  <footer class="d-flex justify-content-center bg-primary text-white p-1">
+    <p class="text-center mb-0">&copy; 2024 PDF to Audio. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
