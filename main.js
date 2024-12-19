@@ -31,7 +31,15 @@ ipcMain.handle("text-to-audio", async (_, text, lang = "en") => {
 });
 
 // Handle PDF-to-Audio conversion (directly from dialog)
-ipcMain.handle("pdf-to-audio", async () => {});
+ipcMain.handle("pdf-to-audio", async () => {
+  try {
+    const audioPath = await pdfConverter.convertPdfToAudioFromDialog();
+    return audioPath;
+  } catch (error) {
+    console.error("Error converting PDF to audio:", error);
+    return null;
+  }
+});
 
 app.on("window-all-closed", () => {
   app.quit();
