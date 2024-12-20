@@ -4,7 +4,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electronmon ."
+    "dev": "electronmon .",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:all": "electron-builder --mac --win"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +23,26 @@
     "electron": "^33.2.1",
     "electron-builder": "^25.1.8",
     "electronmon": "^2.0.3"
+  },
+  "build": {
+    "appId": "com.example.pdftoaudio",
+    "productName": "PDFTextToAudio",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "assets/js/renderer.js",
+      "assets/**/*"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icons/mac/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/win/icon.ico"
+    }
   }
 }
