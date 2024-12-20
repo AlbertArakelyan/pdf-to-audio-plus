@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
     "electronmon": "^2.0.3"
   }
 }
