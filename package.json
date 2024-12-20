@@ -1,6 +1,6 @@
 {
   "name": "pdf-to-audio",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
