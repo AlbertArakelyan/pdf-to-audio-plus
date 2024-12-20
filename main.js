@@ -1,5 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 
+// for setting up app menu
+// https://electronjs.org/docs/latest/api/menu#:~:text=On%20macOS%20the%20label%20of,plist%20file.
+
 const pdfConverter = require("./assets/js/services/PdfConverter");
 const audioConverter = require("./assets/js/services/AudioConverter");
 
@@ -7,6 +10,8 @@ let mainWindow;
 
 app.on("ready", () => {
   mainWindow = new BrowserWindow({
+    icon: "/assets/images/icon.png",
+    title: "PDF to Audio",
     width: 800,
     height: 600,
     webPreferences: {
@@ -17,7 +22,7 @@ app.on("ready", () => {
   });
 
   mainWindow.loadFile("index.html");
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 });
 
 // Handle PDF to Text conversion
