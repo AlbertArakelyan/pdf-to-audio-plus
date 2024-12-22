@@ -41,7 +41,7 @@ You can download the app from the **Releases** at the right or from our [website
 _Note: Make sure you are using correct `node` and `yarn` versions._
 
 ### Versions
-- node: `20.10.0`
+- node: `20.18.0`
 - npm: `10.2.3`
 
 ### Repo
