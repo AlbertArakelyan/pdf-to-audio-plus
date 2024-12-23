@@ -33,7 +33,7 @@
 </div>
 
 ## ⬇️ Download
-You can download the app from the **Releases** at the right or from our [website](https://albertarakelyan.com).
+You can download the app from the **Releases** at the right or from the official [website](https://pdf2audioplus.vercel.app/).
 
 ---
 
