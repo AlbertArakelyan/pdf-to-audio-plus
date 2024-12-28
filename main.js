@@ -50,3 +50,23 @@ ipcMain.handle("pdf-to-audio", async () => {
 app.on("window-all-closed", () => {
   app.quit();
 });
+
+// Action might be needed in future
+// ipcMain.handle("generate-audio", (_, text, fileName) => {
+//   return new Promise((resolve, reject) => {
+//     // Define output audio path
+//     const safeFileName = fileName.replace(/[^a-z0-9]/gi, "_").toLowerCase(); // Sanitize file name
+//     const audioPath = path.join(audioDir, `${safeFileName}.wav`);
+
+//     // Generate the audio file
+//     say.export(text, null, 1.0, audioPath, (err) => {
+//       if (err) {
+//         console.error("Error exporting audio:", err);
+//         reject(new Error(`Failed to generate audio: ${err.message}`));
+//       } else {
+//         console.log("Audio generated successfully:", audioPath);
+//         resolve(audioPath);
+//       }
+//     });
+//   });
+// });

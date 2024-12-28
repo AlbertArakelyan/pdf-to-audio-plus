@@ -44,3 +44,17 @@ async function convertPdfToAudioFromDialog() {
     console.error(error.message);
   }
 }
+
+// function might be needed in future
+// async function convertText() {
+//   const textInput = document.getElementById('textInput').value;
+
+//   if (!textInput) {
+//       alert('Please enter some text.');
+//       return;
+//   }
+
+//   // Generate audio from input text
+//   const audioPath = await ipcRenderer.invoke('generate-audio', textInput, 'text_to_audio');
+//   alert(`Audio generated successfully! Saved at: ${audioPath}`);
+// }
